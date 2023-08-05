@@ -23,17 +23,17 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun MyApp(
-    modifier: Modifier = Modifier,
-    names: List<String> = listOf("World", "Compose"),
-) {
-    Column(modifier = modifier) {
-        for (name in names) {
-            Greeting(name = name)
-        }
-    }
-}
+//@Composable
+//fun MyApp(
+//    modifier: Modifier = Modifier,
+//    names: List<String> = listOf("World", "Compose"),
+//) {
+//    Column(modifier = modifier) {
+//        for (name in names) {
+//            Greeting(name = name)
+//        }
+//    }
+//}
 
 @Composable
 fun Greeting(name: String) {
@@ -76,6 +76,42 @@ fun DefaultPreview() {
 
 // * * * * * * * * * * * * * *
 // Ch.7 상태 호이스팅
+@Composable
+fun MyApp(modifier: Modifier = Modifier) {
+
+    var shouldShowOnboarding by remember { mutableStateOf(true) }
+
+    Surface(modifier) {
+        if (shouldShowOnboarding) {
+            OnboardingScreen(/* TODO */)
+        } else {
+            Greetings()
+        }
+    }
+}
+
+
+
+@Composable
+private fun Greetings(
+    modifier: Modifier = Modifier,
+    names: List<String> = listOf("World", "Compose")
+) {
+    Column(modifier = modifier.padding(vertical = 4.dp)) {
+        for (name in names) {
+            Greeting(name = name)
+        }
+    }
+}
+
+@Preview(showBackground = true, widthDp = 320)
+@Composable
+private fun GreetingsPreview() {
+    BasicsCodelabTheme {
+        Greetings()
+    }
+}
+
 
 @Composable
 fun OnboardingScreen(modifier: Modifier = Modifier) {
