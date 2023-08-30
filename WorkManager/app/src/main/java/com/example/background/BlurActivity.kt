@@ -20,6 +20,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.work.WorkInfo
 import com.example.background.databinding.ActivityBlurBinding
 
 class BlurActivity : AppCompatActivity() {
@@ -37,6 +39,23 @@ class BlurActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.goButton.setOnClickListener { viewModel.applyBlur(blurLevel) }
+        viewModel.outputWorkInfos.observe(this, workInfoObserver())
+    }
+
+    private fun workInfoObserver(): Observer<List<WorkInfo>> {
+        return Observer { listOfWorkInfo ->
+            if (listOfWorkInfo.isNullOrEmpty()) {
+                return@Observer
+            }
+
+            /* continuation 모두 같은 tag 를 쓰고 있기 때문에 하나만 체크크 */
+           val workInfo = listOfWorkInfo[0]
+
+            if (workInfo.state.isFinished)
+                showWorkFinished()
+            else
+                showWorkInProgress()
+        }
     }
 
     /**
