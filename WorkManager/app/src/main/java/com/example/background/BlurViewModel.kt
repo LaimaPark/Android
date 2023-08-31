@@ -68,8 +68,14 @@ class BlurViewModel(application: Application) : ViewModel() {
             .build()
         continuation = continuation.then(blurRequest)
 
+        // 충전중일때만 가능하다는 제약조건 추가
+        val constraints = Constraints.Builder()
+            .setRequiresCharging(true)
+            .build()
+
         // 이미지 임시파일 저장
         val save = OneTimeWorkRequest.Builder(SaveImageToFileWorker::class.java)
+            .setConstraints(constraints) // 충전중 제약조건 추가
             .addTag(TAG_OUTPUT)
             .build()
         continuation = continuation.then(save)
@@ -100,6 +106,11 @@ class BlurViewModel(application: Application) : ViewModel() {
         }
         return builder.build()
     }
+
+    internal fun cancelWork() {
+        workManager.cancelUniqueWork(IMAGE_MANIPULATION_WORK_NAME)
+    }
+
 
     private fun uriOrNull(uriString: String?): Uri? {
         return if (!uriString.isNullOrEmpty()) {
