@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ComposeChapter3</string>
     <string name="title_activity_web_image">WebImageActivity</string>
+    <string name="title_activity_check_box">CheckBoxActivity</string>
 </resources>

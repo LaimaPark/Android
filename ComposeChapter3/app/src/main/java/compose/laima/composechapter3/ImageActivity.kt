@@ -10,6 +10,7 @@ import androidx.compose.material.icons.filled.Settings
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
+import compose.laima.composechapter3.R
 import compose.laima.composechapter3.ui.theme.ComposeChapter3Theme
 
 class ImageActivity : ComponentActivity() {
