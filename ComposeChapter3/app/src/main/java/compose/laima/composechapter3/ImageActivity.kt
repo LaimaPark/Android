@@ -28,10 +28,10 @@ class ImageActivity : ComponentActivity() {
 fun ImageExample() {
     Column {
         // Step 1: Image 만들기
-        Image(
-            painter = painterResource(id = R.drawable.wall),
-            contentDescription = "엔텔로프 캐넌"
-        )
+//        Image(
+//            painter = painterResource(id = R.drawable.wall),
+//            contentDescription = "엔텔로프 캐넌"
+//        )
 
         Image(
             imageVector = Icons.Filled.Settings,

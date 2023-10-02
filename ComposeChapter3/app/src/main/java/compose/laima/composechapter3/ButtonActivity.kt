@@ -15,7 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import compose.laima.chapter_3.ui.theme.ComposeChapter3Theme
+import compose.laima.composechapter3.ui.theme.ComposeChapter3Theme
 
 class ButtonActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
