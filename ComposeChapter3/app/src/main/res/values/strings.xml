@@ -3,4 +3,5 @@
     <string name="title_activity_web_image">WebImageActivity</string>
     <string name="title_activity_check_box">CheckBoxActivity</string>
     <string name="title_activity_text_field">TextFieldActivity</string>
+    <string name="title_activity_top_app_bar">TopAppBarActivity</string>
 </resources>
