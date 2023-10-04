@@ -22,7 +22,6 @@ class ButtonActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeChapter3Theme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
