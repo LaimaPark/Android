@@ -17,20 +17,14 @@ class SlotActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeChapter3Theme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting2("Android")
-                }
+                SlotExample(name = "Android")
             }
         }
     }
 }
 
 @Composable
-fun Greeting2(name: String) {
+fun SlotExample(name: String) {
     Text(text = "Hello $name!")
 }
 
@@ -38,6 +32,6 @@ fun Greeting2(name: String) {
 @Composable
 fun DefaultPreview3() {
     ComposeChapter3Theme {
-        Greeting2("Android")
+        SlotExample("Android")
     }
 }
