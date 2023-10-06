@@ -30,7 +30,7 @@ fun SlotExample(name: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview3() {
+fun SlotPreview() {
     ComposeChapter3Theme {
         SlotExample("Android")
     }
