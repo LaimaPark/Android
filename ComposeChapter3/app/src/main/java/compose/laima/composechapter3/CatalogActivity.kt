@@ -18,26 +18,21 @@ class CatalogActivity : ComponentActivity() {
         setContent {
             ComposeChapter3Theme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting2("Android")
-                }
+                CatalogExample("Android")
             }
         }
     }
 }
 
 @Composable
-fun Greeting2(name: String) {
+fun CatalogExample(name: String) {
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview3() {
+fun CatalogPreview() {
     ComposeChapter3Theme {
-        Greeting2("Android")
+        CatalogExample("Android")
     }
 }
