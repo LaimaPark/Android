@@ -17,20 +17,14 @@ class RecompositionActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeChapter3Theme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting2("Android")
-                }
+                RecompositionExample("Android")
             }
         }
     }
 }
 
 @Composable
-fun Greeting2(name: String) {
+fun RecompositionExample(name: String) {
     Text(text = "Hello $name!")
 }
 
@@ -38,6 +32,6 @@ fun Greeting2(name: String) {
 @Composable
 fun DefaultPreview3() {
     ComposeChapter3Theme {
-        Greeting2("Android")
+        RecompositionExample("Android")
     }
 }
