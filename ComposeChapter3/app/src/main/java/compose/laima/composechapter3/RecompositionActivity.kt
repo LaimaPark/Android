@@ -30,7 +30,7 @@ fun RecompositionExample(name: String) {
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview3() {
+fun RecompositionPreview() {
     ComposeChapter3Theme {
         RecompositionExample("Android")
     }
