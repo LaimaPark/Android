@@ -8,4 +8,5 @@
     <string name="title_activity_scaffold">ScaffoldActivity</string>
     <string name="title_activity_catalog">CatalogActivity</string>
     <string name="title_activity_recomposition">RecompositionActivity</string>
+    <string name="title_activity_constraints">ConstraintsActivity</string>
 </resources>
