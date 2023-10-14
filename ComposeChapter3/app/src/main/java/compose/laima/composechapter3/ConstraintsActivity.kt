@@ -17,27 +17,21 @@ class ConstraintsActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeChapter3Theme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting2("Android")
-                }
+                ConstraintsExample("Android")
             }
         }
     }
 }
 
 @Composable
-fun Greeting2(name: String) {
+fun ConstraintsExample(name: String) {
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview3() {
+fun ConstraintsPreview() {
     ComposeChapter3Theme {
-        Greeting2("Android")
+        ConstraintsExample("Android")
     }
 }
