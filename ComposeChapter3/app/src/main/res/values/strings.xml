@@ -11,4 +11,5 @@
     <string name="title_activity_constraints">ConstraintsActivity</string>
     <string name="title_activity_campus">CampusActivity</string>
     <string name="title_activity_dialog">DialogActivity</string>
+    <string name="title_activity_custom_dialog">CustomDialogActivity</string>
 </resources>
