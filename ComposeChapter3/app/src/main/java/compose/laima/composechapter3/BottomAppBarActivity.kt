@@ -17,20 +17,14 @@ class BottomAppBarActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeChapter3Theme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting7("Android")
-                }
+                BottomAppBarExample("Android")
             }
         }
     }
 }
 
 @Composable
-fun Greeting7(name: String) {
+fun BottomAppBarExample(name: String) {
     Text(text = "Hello $name!")
 }
 
@@ -38,6 +32,6 @@ fun Greeting7(name: String) {
 @Composable
 fun DefaultPreview8() {
     ComposeChapter3Theme {
-        Greeting7("Android")
+        BottomAppBarExample("Android")
     }
 }
