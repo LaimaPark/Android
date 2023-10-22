@@ -22,7 +22,7 @@ class DropdownMenuActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting5("Android")
+                    DropDownExample("Android")
                 }
             }
         }
@@ -30,7 +30,7 @@ class DropdownMenuActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting5(name: String) {
+fun DropDownExample(name: String) {
     Text(text = "Hello $name!")
 }
 
