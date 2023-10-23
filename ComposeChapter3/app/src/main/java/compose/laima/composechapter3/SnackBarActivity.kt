@@ -22,7 +22,7 @@ class SnackBarActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting6("Android")
+                    SnackBarExample("Android")
                 }
             }
         }
@@ -30,7 +30,7 @@ class SnackBarActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting6(name: String) {
+fun SnackBarExample(name: String) {
     Text(text = "Hello $name!")
 }
 
@@ -38,6 +38,6 @@ fun Greeting6(name: String) {
 @Composable
 fun DefaultPreview7() {
     ComposeChapter3Theme {
-        Greeting6("Android")
+        SnackBarExample("Android")
     }
 }
