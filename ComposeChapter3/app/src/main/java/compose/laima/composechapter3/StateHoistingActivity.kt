@@ -22,7 +22,7 @@ class StateHoistingActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting3("Android")
+                    HoistingExample("Android")
                 }
             }
         }
@@ -30,14 +30,14 @@ class StateHoistingActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting3(name: String) {
+fun HoistingExample(name: String) {
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview4() {
+fun HoistingPreview() {
     ComposeChapter3Theme {
-        Greeting3("Android")
+        HoistingExample("Android")
     }
 }
