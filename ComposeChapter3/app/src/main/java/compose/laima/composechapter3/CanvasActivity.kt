@@ -22,7 +22,7 @@ class CampusActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting2("Android")
+                    CanvasExample("Android")
                 }
             }
         }
@@ -30,14 +30,14 @@ class CampusActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting2(name: String) {
+fun CanvasExample(name: String) {
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview3() {
+fun CanvasPreview() {
     ComposeChapter3Theme {
-        Greeting2("Android")
+        CanvasExample("Android")
     }
 }
