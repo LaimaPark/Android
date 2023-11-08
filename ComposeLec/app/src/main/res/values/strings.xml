@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ComposeLec</string>
+    <string name="title_activity_constraint_set">ConstraintSetActivity</string>
+    <string name="title_activity_constraint_barrier_chain">ConstraintBarrierChainActivity</string>
+</resources>
